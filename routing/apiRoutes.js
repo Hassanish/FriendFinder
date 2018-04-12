@@ -13,8 +13,8 @@ module.exports = function (app) {
         };
         for (var i = 0; i < friendsData.length; i++) {
             var diffCounter = 0;
-            for (var k = 0; k < friendsData[i].scores.length; k++) {
-               diffCounter += Math.abs(parseInt(friendsData[i].scores[k]) - parseInt(newFriendResponses[k]))              
+            for (var j = 0; j < friendsData[i].scores.length; j++) {
+               diffCounter += Math.abs(parseInt(friendsData[i].scores[j]) - parseInt(newFriendResponses[j]))              
             }    
             if (bestMatch.bestMatchDifference > diffCounter) {
 
