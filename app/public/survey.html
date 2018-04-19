@@ -160,7 +160,7 @@
                         </select>
                     </div>
               
-                <button type="submit" class="btn btn-primary" id="formSubmit">Submit &nbsp &nbsp <i class="far fa-paper-plane"></i></button>
+                <button type="submit" class="btn btn-primary" id="Submit">Submit &nbsp &nbsp <i class="far fa-paper-plane"></i></button>
                 
               
                 <hr>
@@ -239,7 +239,9 @@
 
         <script>
             $("#Submit").on("click", function(event) {
+                console.log("ia ma submited")
                 event.preventDefault();
+               
                 function formValidation() {
                     var isValid = true;
                     $(".form-control").each(function() {
@@ -249,7 +251,7 @@
                     });
                     return isValid;
                 };
-                if (formValidation()) {
+                if (formValidation()==true ) {
                     var newFriendData = {
                         name: $("#userName").val(),
                         photo: $("#userPicture").val(),
